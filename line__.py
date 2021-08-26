@@ -125,7 +125,7 @@ for i in range(epochs):
     if i %100==0:
         print("epoch=%.f,inclination1=%.04f,inclination2=%0.4f,intercept=%.04f"%(i,a1,a2,b))
 """
-
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -162,3 +162,75 @@ graph.set_zlabel('Score')
 graph.dist=11
 
 plt.show()
+"""
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+
+data=[[2,0],[4,0],[6,0],[8,1],[10,1],[12,1],[14,1]]
+
+x_data=[i[0] for i in data]
+y_data=[i[1] for i in data]
+
+plt.scatter(x_data,y_data)
+plt.xlim(0,15)
+plt.ylim(-.1,1.1)
+
+a=0
+b=0
+
+lr=0.9
+def sigmoid(x):
+    return 1/(1+np.e ** (-x))
+for i in range(2001):
+    for x_data,y_data in data:
+        a_diff = x_data*(sigmoid(a*x_data+b)-y_data)
+        b_diff = sigmoid(a*x_data+b)-y_data
+        a=a-lr*a_diff
+        b=b-lr*b_diff
+
+        if i % 1000 == 0:
+            print("epoch=%.f,inclination=%.04f,.4f,intercept=%.04f" % (i, a, b))
+
+plt.scatter(x_data,y_data)
+plt.xlim(0,15)
+plt.ylim(-.1,1.1)
+x_range=(np.arange(0,15,0.1))
+plt.plot(np.arange(0,15,0.1),np.array([sigmoid(a*x+b) for x in x_range]))
+plt.show()
+"""
+"""
+
+import numpy as np
+
+w11=np.array([-2,-2])
+w12=np.array([2,2])
+w2=np.array([1,1])
+b1=3
+b2=-1
+b3=-1
+
+def MLP(x,w,b):
+    y=np.sum(w*x)+b
+    if y<=0:
+        return 0
+    else:
+        return 1
+
+def NAND(x1,x2):
+    return MLP(np.array([x1,x2]),w11,b1)
+
+def OR(x1,x2):
+    return MLP(np.array([x1,x2]),w12,b2)
+
+def AND(x1,x2):
+    return MLP(np.array([x1,x2]),w2,b3)
+
+def XOR(x1,x2):
+    return AND(NAND(x1,x2),OR(x1,x2))
+
+if __name__=='__main__':
+    for x in [(0,0),(1,0),(0,1),(1,1)]:
+        y=XOR(x[0],x[1])
+        print("input_val:"+str(x)+", output:"+str(y))
+"""
