@@ -234,3 +234,175 @@ if __name__=='__main__':
         y=XOR(x[0],x[1])
         print("input_val:"+str(x)+", output:"+str(y))
 """
+"""
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+import numpy as np
+import tensorflow as tf
+
+np.random.seed(3)
+tf.compat.v1.set_random_seed(3)
+
+Data_set=np.loadtxt("dataset/ThoraricSurgery.csv",delimiter=",")
+X= Data_set[:,0:17]
+Y= Data_set[:,17]
+
+model=Sequential()
+model.add(Dense(30,input_dim=17,activation='relu'))
+model.add(Dense(1,activation='sigmoid'))
+
+model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+model.fit(X,Y,epochs=100,batch_size=10)
+
+print("\n Accuray: %.4f" % (model.evaluate(X,Y)[1]))
+"""
+"""
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df=pd.read_csv('dataset/pima-indians-diabetes.csv',names=["pregnant","plasma","pressure","thickness","insulin","BMI","pedigree","age","class"])
+
+print(df.head(5))
+print(df.info())
+print(df.describe())
+print(df[['plasma','class']])
+colormap=plt.cm.gist_heat
+plt.figure(figsize=(12,12))
+
+sns.heatmap(df.corr(),linewidths=0.1,vmax=0.5,cmap=colormap,linecolor='white',annot=True)
+plt.show()
+
+grid=sns.FacetGrid(df,col='class')
+grid.map(plt.hist,'plasma',bins=10)
+plt.show()
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+import numpy
+import tensorflow as tf
+
+numpy.random.seed(3)
+tf.random.set_seed(3)
+
+dataset=numpy.loadtxt("dataset/pima-indians-diabetes.csv",delimiter=",")
+X=dataset[:,0:8]
+Y=dataset[:,8]
+
+model =Sequential()
+model.add(Dense(12,input_dim=8,activation='relu'))
+model.add(Dense(8,activation='relu'))
+model.add(Dense(1,activation='sigmoid'))
+
+model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
+
+model.fit(X,Y,epochs=200,batch_size=10)
+
+print("\n Accuracy: %.4f" % (model.evaluate(X,Y)[1]))
+"""
+"""
+from keras.models import Sequential
+from keras.layers.core import Dense
+from sklearn.preprocessing import LabelEncoder
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+
+np.random.seed(3)
+tf.random.set_seed(3)
+
+df =pd.read_csv('dataset/iris.csv',names=["sepal_length","sepal_width","petal_length","petal_width","species"])
+
+sns.pairplot(df,hue='species');
+plt.show()
+
+dataset=df.values
+X=dataset[:,0:4].astype(float)
+Y_obj=dataset[:,4]
+
+e=LabelEncoder()
+e.fit(Y_obj)
+Y=e.transform(Y_obj)
+Y_encoded=tf.keras.utils.to_categorical(Y)
+
+model=Sequential()
+model.add(Dense(16,input_dim=4,activation='relu'))
+model.add(Dense(3,activation='softmax'))
+
+model.compile(loss='mean_squared_error',optimizer='adam',metrics=['accuracy'])
+model.fit(X, Y_encoded, epochs=50, batch_size=1)
+
+print("\n Accuracy: %.4f" % (model.evaluate(X,Y_encoded)[1]))
+"""
+"""
+from keras.models import Sequential
+from keras.layers.core import Dense
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+
+import pandas as pd
+import numpy
+import tensorflow as tf
+
+seed=0
+numpy.random.seed(seed)
+tf.random.set_seed(3)
+
+df=pd.read_csv('dataset/sonar.csv',header=None)
+
+dataset=df.values
+X=dataset[:,0:60].astype(float)
+Y_obj=dataset[:,60]
+
+e=LabelEncoder()
+e.fit(Y_obj)
+Y=e.transform(Y_obj)
+
+X_train,X_test,Y_train,Y_test= \
+    train_test_split(X,Y,test_size=0.3,random_state=seed)
+
+model=Sequential()
+model.add(Dense(24,input_dim=60,activation='relu'))
+model.add(Dense(10,activation='relu'))
+model.add(Dense(1,activation='sigmoid'))
+
+model.compile(loss='mean_squared_error',optimizer='adam',metrics=['accuracy'])
+model.fit(X_test, Y_test, epochs=130, batch_size=5)
+
+model.save('my_model.h5')
+del model
+model=load_model('my_model.h5')
+print("\n Accuracy: %.4f" % (model.evaluate(X_test, Y_test)[1]))
+"""
+from keras.models import Sequential
+from keras.layers.core import Dense
+from keras.callbacks import EarlyStopping
+
+import pandas as pd
+import numpy
+import tensorflow as tf
+
+numpy.random.seed(3)
+tf.random.set_seed(3)
+
+df_pre=pd.read_csv('dataset/wine.csv',header=None)
+df=df_pre.sample(frac=0.15)
+
+dataset=df.values
+X=dataset[:,0:12]
+Y=dataset[:,12]
+
+model=Sequential()
+model.add(Dense(30,input_dim=12,activation='relu'))
+model.add(Dense(12,activation='relu'))
+model.add(Dense(8,activation='relu'))
+model.add(Dense(1,activation='sigmoid'))
+model.compile(loss='mean_squared_error',optimizer='adam',metrics=['accuracy'])
+early_stopping_callback=EarlyStopping(monitor='val_loss',patience=100)
+model.fit(X,Y,validation_split=0.2,epochs=2000,batch_size=500,callbacks=[early_stopping_callback])
+
+print("\n accuracy: %.4f"% (model.evaluate(X,Y)[1]))
