@@ -8,7 +8,7 @@ int main(void)
 	//find and print max, mid,min
 	int max,mid,min;
 	int case_val;	
-	case_val=(a>b&&b>c)?1:(a>c&&c>b)?2:(c>a&&a>b)?3:(c>b&&b<a)?4:(b>a&&a<c)?5:6;
+	case_val=(a>b&&b>c)?1:(a>c&&c>b)?2:(c>a&&a>b)?3:(c>b&&b>a)?4:(b>a&&a>c)?5:6;
 	printf("%d",case_val);
 	switch (case_val){
  		case 1://a>b>c
