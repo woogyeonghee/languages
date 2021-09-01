@@ -1,0 +1,29 @@
+-c language
+	1.data type
+	 - fahr2celus	
+		:no use float or double make type
+	 - circleArea	
+		:use double type
+	 - limit 	
+		:check data limits of each types
+	
+	2.operater
+	 - incrementor
+	 - isAlphabet
+	 - isLeap
+	 - isOdd
+	 - isOrdinary
+	 - letterAttr
+	 - relationOpertation
+	 - genderRatio	
+		:how to use type casting
+	 - average	:
+
+	3.control flow
+	4.function
+	5.structure
+	6.variant & constant
+	7.variant & string
+	8.pointer & string
+	9.scope
+
