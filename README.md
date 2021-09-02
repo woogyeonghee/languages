@@ -89,6 +89,8 @@
 		:print x with * 
 	 - xwing2
 		:print x with * easy way
+	4.array
+
 	4.function
 	5.structure
 	6.variant & constant
