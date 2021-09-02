@@ -8,17 +8,15 @@ int main(void)
 	printf("input value : ");
 	scanf("%d",&value);
 	
-	int f_value;
 	int i;
 
 	for (i=0; i<10;++i){
 		if(value== nums[i]){
-			f_value=1;
 			break;
 		}
-		f_value=0;
 	}
-	if(f_value==1){
+
+	if(i<10){
 		printf("find value in nums[%d]\n",i);
 	}
 	else{
