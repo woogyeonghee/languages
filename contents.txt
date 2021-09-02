@@ -49,6 +49,10 @@
 		:check year with ()?A:B
 	 - maxMidMin
 		:check max,mid,min with switch 
+	 - maxMidMin2
+		:check max,mid,min with else if 
+	 - maxMidMin3
+		:check max,mid,min with else if readable 
 	 - multiplyTable
 		:multiply use for for
 	 - OddEven
@@ -83,6 +87,8 @@
 		:print sum 1 to 10 use for
 	 - xwing
 		:print x with * 
+	 - xwing2
+		:print x with * easy way
 	4.function
 	5.structure
 	6.variant & constant
