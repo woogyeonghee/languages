@@ -90,6 +90,26 @@
 	 - xwing2
 		:print x with * easy way
 	4.array
+	 - baseball
+		:use srand&time&array point is for for
+	 - bublleSorting
+		:sort like index 1,2 2,3 3,4 use tmp
+	 - dice
+		:use srand&time&array make dice
+	 - findMax
+		:find max value with array
+	 - findValue
+		:find value with array point i<10
+	 - lotto
+		:use srand&time&array del duplicate
+	 - procScore
+		:use sizeof(scores)/sizeof(scores[0])
+	 - scoreGrade4
+		:use [score/10] find grade
+	 - selectionSorting
+		:sort like index 1,2 1,3 1,4 use tmp
+	 - sumArray
+		:sum and optimize 
 
 	4.function
 	5.structure
