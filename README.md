@@ -102,6 +102,10 @@
 		:find value with array point i<10
 	 - lotto
 		:use srand&time&array del duplicate
+	 - lotto2
+		:use srand&time&array del duplicate another way
+	 - lotto3
+		:use srand&time&array del duplicate like real lotto
 	 - procScore
 		:use sizeof(scores)/sizeof(scores[0])
 	 - scoreGrade4
