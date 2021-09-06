@@ -41,11 +41,13 @@
 		:chang number to pos with ()?A:B
 	 - bigLetter
 		:check A to Z with if
+	 - factoial
+		:caluculate factorial number
 	 - isEven
 		:odd or even with if-else
 	 - leapOrdinary
 		:check year with if-else
-	 - leapOrdinary
+	 - leapOrdinary2
 		:check year with ()?A:B
 	 - maxMidMin
 		:check max,mid,min with switch 
@@ -90,6 +92,10 @@
 	 - xwing2
 		:print x with * easy way
 	4.array
+	 - arrayAssignment
+		:array substitude by index
+	 - arrayCompare
+		:array compare by index
 	 - baseball
 		:use srand&time&array point is for for
 	 - bublleSorting
@@ -115,10 +121,42 @@
 	 - sumArray
 		:sum and optimize 
 
-	4.function
-	5.structure
-	6.variant & constant
-	7.variant & string
-	8.pointer & string
-	9.scope
+	4.pointer
+	 - pointer1
+		:use pointer back reference
+	 - pointer2
+		:use pointer back reference
+	 - pointer3
+		:check big endian and little
+	 - pointer4
+		:double pointer
+	 - pointer5
+		:use function pointer
+	 - pointer6
+		:use void pointer
+	 - pointerAndArray
+		:use pointer value in array
+	5.function
+	 - engine_serial
+		:main.c serial.c serial.h use local static
+	 - rand	
+		:main.c rand.c rand.h use global static
+	 - power
+		:use fuction to cal power
+	 - swap2
+		:send pointer func factor to main
+	 - swap
+		:not use pointer factor to main
+	6.struct
+	 - date
+		:date in structure
+	 - testscore
+		:using typedef, FILE 
+	 - name
+		:stdio
+	8.string
+	 - string
+		:make own strcpy,strcmp,strcat,strlen
+	 - teststring
+		:string copy
 
