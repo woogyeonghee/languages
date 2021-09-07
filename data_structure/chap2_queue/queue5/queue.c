@@ -4,10 +4,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-void initQueue(Queue *ps,int size)
+void initQueue(Queue *ps,int size, int eleSize)
 {
-    ps->pArr=malloc(sizeof(int)*size);
+    ps->pArr=malloc(eleSize*size);
     assert(ps->pArr);
+
+    ps->eleSize=eleSize;
     ps->size=size;
     ps->rear=0;
     ps->front=0;
@@ -20,19 +22,19 @@ void cleanupQueue(Queue *ps)
 
 }
 
-void push (Queue *ps,int data)
+void push (Queue *ps,const void *pData)
 {
     assert(ps->rear!=ps->size);
     //ps->array[ps->rear]=data;
-    ps->pArr[ps->rear]=data;
+    memcpy((unsigned char *)ps->pArr + ps->rear*ps->eleSize,pData,ps->eleSize);
     ++ps->rear;
 }
 
 
-void pop (Queue *ps,int *pData)
+void pop (Queue *ps,void *pData)
 {
     assert(ps->front!=ps->rear);
     //int result =ps->array[ps->front];
-    *pData=ps->pArr[ps->front];
+    memcpy(pData,(unsigned char *)ps->pArr +ps->front*ps->eleSize,ps->eleSize);
     ++ps->front;
 }

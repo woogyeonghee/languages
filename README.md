@@ -48,7 +48,7 @@
 	 - leapOrdinary
 		:check year with if-else
 	 - leapOrdinary2
-		:check year with ()?A:B
+	  	:check year with ()?A:B
 	 - maxMidMin
 		:check max,mid,min with switch 
 	 - maxMidMin2
@@ -91,7 +91,8 @@
 		:print x with * 
 	 - xwing2
 		:print x with * easy way
-	4.array
+	
+    4.array
 	 - arrayAssignment
 		:array substitude by index
 	 - arrayCompare
@@ -121,7 +122,7 @@
 	 - sumArray
 		:sum and optimize 
 
-	4.pointer
+	5.pointer
 	 - pointer1
 		:use pointer back reference
 	 - pointer2
@@ -136,7 +137,8 @@
 		:use void pointer
 	 - pointerAndArray
 		:use pointer value in array
-	5.function
+
+    6.function
 	 - engine_serial
 		:main.c serial.c serial.h use local static
 	 - rand	
@@ -147,16 +149,21 @@
 		:send pointer func factor to main
 	 - swap
 		:not use pointer factor to main
-	6.struct
+	
+    7.struct
 	 - date
 		:date in structure
 	 - testscore
 		:using typedef, FILE 
 	 - name
 		:stdio
-	8.string
+	
+    8.string
 	 - string
 		:make own strcpy,strcmp,strcat,strlen
 	 - teststring
 		:string copy
-
+   
+    9.dynamic allocation
+     - arrayWithSize
+        :use malloc
