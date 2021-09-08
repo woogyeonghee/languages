@@ -1,4 +1,4 @@
-DATA_TYPE
+DATA TYPE
     1.stack
      - stack
         :using one main.c file make 1type 1space
@@ -22,3 +22,13 @@ DATA_TYPE
         :1type many space using dynamic allo
      - queue5
         :many types many space using void pointer
+     - circularQueue
+        :use % make circularQueus
+
+    3.linked list
+     - list
+        :using node only one data type
+     - list2
+        :using memcmp use two data types
+     - list3
+        :using one data type make creatnode func
