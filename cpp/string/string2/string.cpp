@@ -45,8 +45,9 @@ String::String(const char *str)
 
 String::String(const char *str, bool )			// 함수 중복을 사용하려면 인자가 달라야하기 때문에 의미없는 bool을 줬음
 {
-	str_ = (char *)str;								// type casting이 필요하다
-	len_ = strlen(str);
+	//str_ = (char *)str;								// type casting이 필요하다
+	str_ =const_cast<char*>(str);
+    len_ = strlen(str);
 }
 
 String::String(const String& rhs)					// deep copy

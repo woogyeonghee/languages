@@ -1,6 +1,53 @@
 #include <cstdio>
 #include "complex.h"
 
+
+Complex *Complex::freeList=NULL;
+const int Complex::BUFSIZE=256;
+
+
+void *Complex::operator new(size_t size)
+{
+    if (size!=sizeof(Complex))
+    {
+        return ::operator new(size);
+    }
+    if (freeList ==NULL)
+    {
+        Complex *newBlock = static_cast<Complex *>(::operator new(256*sizeof(Complex)));
+        if(newBlock==NULL)
+            return NULL;
+
+        for(int i=0; i<=BUFSIZE-1;++i)
+        {
+            newBlock[i].next=&newBlock[i]; 
+        }
+        newBlock[BUFSIZE-1].next=NULL;
+
+        freeList = newBlock;
+    }
+    Complex *p = freeList;
+    freeList = p->next;
+
+    return p;
+}
+
+void Complex::operator delete(void *ptr,size_t size)
+{
+    if(ptr ==0)
+        return;
+
+    if(size !=sizeof(Complex))
+    {
+        ::operator delete(ptr);
+        return;
+    }
+
+    Complex *p = static_cast<Complex *>(ptr);
+    p->next=freeList;
+    freeList=p;
+}
+
 //(#,#i),(#,#),(#),#
 std::istream& operator>>(std::istream& in,Complex& rhs)
 {

@@ -1,13 +1,16 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 #include <iostream>
-
+#include <string>
 
 class Complex
 {
 friend std::istream& operator>>(std::istream& in,Complex& rhs);
 friend std::ostream& operator<<(std::ostream& out, const Complex& rhs);
 public:
+    static void *operator new(size_t size);
+    static void operator delete(void *ptr,size_t size);
+
     //Complex() { } X
 
     //Complex(const Complex& rhs) { copy }
@@ -36,7 +39,16 @@ public:
 
 
 private:
-    double re_;
-    double im_;
+    static Complex *freeList;
+    static const int BUFSIZE;
+    union
+    {
+        struct
+        {
+            double re_;
+            double im_;
+        };
+        Complex *next;
+    };
 };
 #endif
