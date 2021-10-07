@@ -53,8 +53,3 @@ const int& SafeArray::operator[](int index) const
 
 	return this->Array::operator[](index);
 }
-
-int SafeArray::size() const
-{
-	return this->Array::size_;				// 자식의 멤버 함수가 부모의 private 변수 접근 -> 접근 불가
-}

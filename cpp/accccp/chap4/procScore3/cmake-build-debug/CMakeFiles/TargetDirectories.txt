@@ -1,0 +1,3 @@
+/home/test/c_scr/cpp/accccp/procScore3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/test/c_scr/cpp/accccp/procScore3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/test/c_scr/cpp/accccp/procScore3/cmake-build-debug/CMakeFiles/procScore3.dir

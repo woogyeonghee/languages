@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/c_scr/cpp/acpp/proScore3/main.cpp
+algorithm
+-
+iomanip
+-
+ios
+-
+iostream
+-
+string
+-
+vector
+-
+stdexcept
+-
+

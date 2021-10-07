@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/accelerated/ex4_6/grade.h
+vector
+-
+student_info.h
+/home/test/accelerated/ex4_6/student_info.h
+
+/home/test/accelerated/ex4_6/student_info.cpp
+iostream
+-
+vector
+-
+student_info.h
+/home/test/accelerated/ex4_6/student_info.h
+grade.h
+/home/test/accelerated/ex4_6/grade.h
+
+/home/test/accelerated/ex4_6/student_info.h
+iostream
+-
+string
+-
+vector
+-
+

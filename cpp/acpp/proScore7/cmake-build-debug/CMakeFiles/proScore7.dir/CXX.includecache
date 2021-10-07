@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/c_scr/cpp/acpp/proScore7/Student_info.h
+iostream
+-
+string
+-
+vector
+-
+
+/home/test/c_scr/cpp/acpp/proScore7/grade.h
+vector
+-
+Student_info.h
+/home/test/c_scr/cpp/acpp/proScore7/Student_info.h
+
+/home/test/c_scr/cpp/acpp/proScore7/main.cpp
+algorithm
+-
+iomanip
+-
+iostream
+-
+stdexcept
+-
+string
+-
+vector
+-
+median.h
+/home/test/c_scr/cpp/acpp/proScore7/median.h
+grade.h
+/home/test/c_scr/cpp/acpp/proScore7/grade.h
+Student_info.h
+/home/test/c_scr/cpp/acpp/proScore7/Student_info.h
+
+/home/test/c_scr/cpp/acpp/proScore7/median.h
+vector
+-
+
