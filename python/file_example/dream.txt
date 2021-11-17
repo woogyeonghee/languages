@@ -1,0 +1,15 @@
+word_list
+I;    have;    a;    dream;    a;    song;    to;    sing
+to;    help;    me;    cope;    with;    anything
+if;    you;    see;    the;    wonder;    of;    a;    fairy;    tale
+you;    can;    take;    the;    future;    even
+if;    you;    fail;    I;    believe;    in;    angels
+something;    good;    in;    everything
+
+line_list
+I have a dream a song to sing;
+to help me cope with anything;
+if you see the wonder of a fairy tale;
+you can take the future even;
+if you fail I believe in angels;
+something good in everything;
