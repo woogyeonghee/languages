@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/accelerated/procScore5/grade.h
+vector
+-
+student_info.h
+/home/test/accelerated/procScore5/student_info.h
+
+/home/test/accelerated/procScore5/main.cpp
+algorithm
+-
+iostream
+-
+iomanip
+-
+stdexcept
+-
+string
+-
+vector
+-
+student_info.h
+/home/test/accelerated/procScore5/student_info.h
+grade.h
+/home/test/accelerated/procScore5/grade.h
+
+/home/test/accelerated/procScore5/student_info.h
+iostream
+-
+string
+-
+vector
+-
+

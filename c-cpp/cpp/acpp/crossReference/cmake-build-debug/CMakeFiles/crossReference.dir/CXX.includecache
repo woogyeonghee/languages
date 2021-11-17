@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/c_scr/cpp/acpp/crossReference/main.cpp
+iostream
+-
+map
+-
+cctype
+-
+algorithm
+-
+vector
+-
+string
+-
+

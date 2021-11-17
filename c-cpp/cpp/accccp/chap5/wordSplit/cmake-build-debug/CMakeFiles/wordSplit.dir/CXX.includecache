@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/c_scr/cpp/accccp/chap5/wordSplit/main.cpp
+algorithm
+-
+cctype
+-
+iostream
+-
+string
+-
+vector
+-
+

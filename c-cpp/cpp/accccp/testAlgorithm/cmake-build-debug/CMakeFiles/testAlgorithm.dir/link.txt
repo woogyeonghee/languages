@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/testAlgorithm.dir/main.cpp.o -o testAlgorithm 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/proScore2.dir/main.cpp.o -o proScore2 

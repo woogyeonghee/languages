@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/procScore4.dir/main.cpp.o CMakeFiles/procScore4.dir/median.cpp.o CMakeFiles/procScore4.dir/grade.cpp.o CMakeFiles/procScore4.dir/student_info.cpp.o -o procScore4 

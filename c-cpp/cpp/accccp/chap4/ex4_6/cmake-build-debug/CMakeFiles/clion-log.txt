@@ -1,0 +1,4 @@
+/snap/clion/164/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/test/accelerated/ex4_6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/test/accelerated/ex4_6/cmake-build-debug

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/wordSplit.dir/main.cpp.o -o wordSplit 

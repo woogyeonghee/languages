@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/test/accelerated/testMedian/main.cpp
+iostream
+-
+numeric
+-
+vector
+-
+median.h
+/home/test/accelerated/testMedian/median.h
+
+/home/test/accelerated/testMedian/median.h
+algorithm
+-
+stdexcept
+-
+vector
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/frameName4_cpp.dir/main.cpp.o -o frameName4_cpp 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/inputOutputIterator.dir/main.cpp.o -o inputOutputIterator 

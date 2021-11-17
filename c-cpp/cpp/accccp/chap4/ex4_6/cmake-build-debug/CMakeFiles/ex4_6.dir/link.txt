@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ex4_6.dir/main.cpp.o CMakeFiles/ex4_6.dir/grade.cpp.o CMakeFiles/ex4_6.dir/median.cpp.o CMakeFiles/ex4_6.dir/student_info.cpp.o -o ex4_6 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/maxMinWord.dir/main.cpp.o -o maxMinWord 
